@@ -8,6 +8,7 @@ import {usersData} from "../data/userData";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  users: User[] = usersData;
 
   constructor() {
   }
@@ -15,5 +16,4 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  users: User[] = usersData;
 }
