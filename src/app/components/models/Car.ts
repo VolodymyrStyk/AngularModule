@@ -1,0 +1,8 @@
+export interface Car {
+  id: number;
+  name: string;
+  model: string;
+  color: string;
+  engine: string;
+  speed: number;
+}
