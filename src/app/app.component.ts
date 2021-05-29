@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularModule';
+  users = 'Users';
+  usersWithAdd = 'Users With Address';
+  cars = 'Cars';
 }
