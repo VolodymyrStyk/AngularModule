@@ -20,7 +20,6 @@ export class UserDetailsComponent implements OnInit {
       this.userDet = this.router.getCurrentNavigation()?.extras.state as User;
       }
     });
-
   }
 
   ngOnInit(): void {

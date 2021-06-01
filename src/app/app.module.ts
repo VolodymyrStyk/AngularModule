@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
 import {UsersComponent} from './components/users/users.component';
 import {UserComponent} from './components/user/user.component';
@@ -13,7 +12,7 @@ import {CommentsComponent} from './components/comments/comments.component';
 import {CommentComponent} from './components/comment/comment.component';
 import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {PostDetailsComponent} from './components/post-details/post-details.component';
-import {ResolveService} from "./services/resolve.service";
+import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -29,7 +28,10 @@ const routes: Routes = [
       {path: ':id', component: PostDetailsComponent}
     ]
   },
-  {path: 'comments', component: CommentsComponent, resolve: {data: ResolveService}},
+  {path: 'comments', component: CommentsComponent,
+    children: [
+      {path: ':id', component: CommentDetailsComponent}
+    ]},
 ];
 
 @NgModule({
@@ -44,6 +46,7 @@ const routes: Routes = [
     CommentComponent,
     UserDetailsComponent,
     PostDetailsComponent,
+    CommentDetailsComponent,
 
   ],
   imports: [

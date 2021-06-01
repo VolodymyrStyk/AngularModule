@@ -1,0 +1,6 @@
+.wrap-content{
+  display: flex;
+}
+.wrap-content div {
+  width: 50%;
+}

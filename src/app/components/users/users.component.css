@@ -1,6 +1,6 @@
 .wrap-content{
   display: flex;
 }
-.users-wrap{
-  margin-right: 50px;
+.wrap-content div {
+  width: 50%;
 }
