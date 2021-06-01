@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# file: ~/.gitignore_global
+.DS_Store
+.idea
