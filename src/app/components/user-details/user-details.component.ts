@@ -15,8 +15,10 @@ export class UserDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       if (!this.router.getCurrentNavigation()?.extras.state){
         this.userService.getUser(params.id).subscribe(value => this.userDet = value);
-      }
+      }else {
+
       this.userDet = this.router.getCurrentNavigation()?.extras.state as User;
+      }
     });
 
   }
