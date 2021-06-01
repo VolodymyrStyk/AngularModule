@@ -1,3 +1,12 @@
 h2{
   background-color: silver;
 }
+.button-nav{
+  list-style: none;
+  background-color: lightgray;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  column-gap: 20px;
+}
+

@@ -11,9 +11,8 @@ import {PostsComponent} from './components/posts/posts.component';
 import {PostComponent} from './components/post/post.component';
 import {CommentsComponent} from './components/comments/comments.component';
 import {CommentComponent} from './components/comment/comment.component';
-import {UserDetailsComponent} from './components/comment/user-details/user-details.component';
-import {PostDetailsComponent} from './components/comment/post-details/post-details.component';
-import {DeactivatorService} from "./services/deactivator.service";
+import {UserDetailsComponent} from './components/user-details/user-details.component';
+import {PostDetailsComponent} from './components/post-details/post-details.component';
 import {ResolveService} from "./services/resolve.service";
 
 const routes: Routes = [
@@ -24,8 +23,12 @@ const routes: Routes = [
       {path: ':id', component: UserDetailsComponent}
     ]
   },
-  {path: 'posts', component: PostsComponent, canDeactivate: [DeactivatorService]},
-  {path: 'posts/:id', component: PostDetailsComponent, canActivate:[DeactivatorService]},
+  {
+    path: 'posts', component: PostsComponent,
+    children: [
+      {path: ':id', component: PostDetailsComponent}
+    ]
+  },
   {path: 'comments', component: CommentsComponent, resolve: {data: ResolveService}},
 ];
 
