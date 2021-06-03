@@ -1,0 +1,9 @@
+<h2>Users Page</h2>
+<div class="wrap-users">
+  <div>
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

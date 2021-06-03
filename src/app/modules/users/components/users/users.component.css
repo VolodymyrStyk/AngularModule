@@ -1,0 +1,6 @@
+.wrap-users{
+  display: flex;
+}
+.wrap-users div{
+  width: 50%;
+}
