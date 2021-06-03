@@ -1,3 +1,12 @@
 ul{
   list-style: none;
 }
+.wrap-nav{
+  background-color: lightgray;
+  display: flex;
+  padding: 20px;
+}
+.wrap-nav button{
+  padding: 10px;
+  margin-left: 10px;
+}

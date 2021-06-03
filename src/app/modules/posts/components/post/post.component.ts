@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Post} from "../../models/post";
+import {Post} from "../../../../components/app/interfaces/post";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -19,5 +19,9 @@ export class PostComponent implements OnInit {
 
   goToDetails() {
     this.router.navigate([this.post.id],{relativeTo:this.activatedRoute, state:this.post})
+  }
+
+  showAllComments() {
+    this.router.navigate([this.post.id,'comments'], {relativeTo: this.activatedRoute, state: this.post})
   }
 }
