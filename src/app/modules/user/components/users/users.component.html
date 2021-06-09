@@ -1,5 +1,8 @@
 <app-user-login></app-user-login>
 <hr>
-<app-user *ngFor="let user of users" [user]="user"></app-user>
+<app-user *ngFor="let user of users" [user]="user" (userLift)="userDetail($event)"></app-user>
 <hr>
-<app-user-details></app-user-details>
+<div *ngIf="userDetails">
+  {{userDetails.id}} -- {{userDetails.name}} -- {{userDetails.email}}
+  <button (click)="changeLogin()">Login</button>
+</div>

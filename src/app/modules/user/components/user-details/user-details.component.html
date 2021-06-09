@@ -1,4 +1,4 @@
-<div>
-  {{userDetails?.id}} -- {{userDetails?.name}} -- {{userDetails?.email}}
+<div *ngIf="userDetail">
+  {{userDetail.id}} -- {{userDetail.name}} -- {{userDetail.email}}
   <button>Login</button>
 </div>

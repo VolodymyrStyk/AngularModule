@@ -5,6 +5,7 @@ import { UserComponent } from './components/user/user.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import {UserService} from "./services/user.service";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -15,9 +16,10 @@ import {UserService} from "./services/user.service";
     UserDetailsComponent,
     UserLoginComponent
   ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
   exports: [
     UsersComponent
   ],

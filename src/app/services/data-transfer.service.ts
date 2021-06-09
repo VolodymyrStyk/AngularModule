@@ -6,7 +6,7 @@ import {User} from "../interfaces/user";
   providedIn: 'root'
 })
 export class DataTransferService {
-  store: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
+  store: BehaviorSubject<string> = new BehaviorSubject<string>('Anonymous');
 
   constructor() {
   }
