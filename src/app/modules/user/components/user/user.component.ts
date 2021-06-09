@@ -1,7 +1,5 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import {User} from "../../../../interfaces/user";
-import {DataTransferService} from "../../../../services/data-transfer.service";
-import {ActivatedRoute, Router} from "@angular/router";
 import { EventEmitter } from '@angular/core';
 
 @Component({

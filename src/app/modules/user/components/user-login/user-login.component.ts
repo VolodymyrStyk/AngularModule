@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../../../../interfaces/user";
 import {DataTransferService} from "../../../../services/data-transfer.service";
 
 @Component({
