@@ -13,11 +13,12 @@ export class UserDetailsComponent implements OnInit {
   userDetail: User;
 
   constructor(private dataTransfer: DataTransferService) {
-
+    console.log(this.userDetail);
   }
 
   ngOnInit(): void {
   }
+
   changeLogin() {
     this.dataTransfer.store.next(this.userDetail.username);
     console.log(this.dataTransfer.store.getValue());

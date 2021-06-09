@@ -3,9 +3,5 @@
 <app-user *ngFor="let user of users" [user]="user" (userLift)="userDetail($event)"></app-user>
 <hr>
 <div *ngIf="userDetails">
-<app-user-details *ngFor="let userDetail of userDetails" [userDetail]="userDetail"></app-user-details>
+<app-user-details [userDetail]="userDetails"></app-user-details>
 </div>
-<!--<div *ngIf="userDetails">-->
-<!--  {{userDetails.id}} &#45;&#45; {{userDetails.name}} &#45;&#45; {{userDetails.email}}-->
-<!--  <button (click)="changeLogin()">Login</button>-->
-<!--</div>-->

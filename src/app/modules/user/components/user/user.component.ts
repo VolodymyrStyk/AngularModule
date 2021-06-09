@@ -14,9 +14,9 @@ export class UserComponent implements OnInit {
   user: User;
 
   @Output()
-  userLift = new EventEmitter<User[]>();
+  userLift = new EventEmitter<User>();
 
-  constructor(private dataTransfer: DataTransferService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor() {
 
   }
 
@@ -24,6 +24,6 @@ export class UserComponent implements OnInit {
   }
 
   getUser() {
-    this.userLift.emit([this.user]);
+    this.userLift.emit(this.user);
   }
 }

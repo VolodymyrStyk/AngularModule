@@ -10,7 +10,7 @@ import {DataTransferService} from "../../../../services/data-transfer.service";
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  userDetails: User[];
+  userDetails: User;
 
   constructor(private userService: UserService, private dataTransfer: DataTransferService) {
   }
@@ -19,13 +19,7 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe(user => this.users = user);
   }
 
-  userDetail(userDetail: User[]) {
-    this.userDetails = userDetail;
-    console.log(userDetail);
+  userDetail(details: User) {
+    this.userDetails = details;
   }
-
-  // changeLogin() {
-  //   this.dataTransfer.store.next(this.userDetails[0].username);
-  //   console.log(this.dataTransfer.store.getValue());
-  // }
 }
