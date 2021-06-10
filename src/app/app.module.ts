@@ -7,6 +7,8 @@ import { TemplateDrivenFormComponent } from './components/template-driven-form/t
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { SelectFormComponent } from './components/select-form/select-form.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { SelectFormComponent } from './components/select-form/select-form.compon
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     SelectFormComponent,
+    UsersComponent,
+    UserPostsComponent,
   ],
   imports: [
     BrowserModule,

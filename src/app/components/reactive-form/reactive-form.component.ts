@@ -27,7 +27,7 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   customValidator(control: AbstractControl) {
-    console.log(control);
+    // console.log(control);
     if (control.value.includes('fuck')){
       return {fuckPresent: true};
     }
