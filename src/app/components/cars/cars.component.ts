@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Car} from "../../interfaces/car";
 import {CarService} from "../../services/car.service";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-cars',
@@ -10,10 +10,13 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class CarsComponent implements OnInit {
   cars: Car[];
+  model = new FormControl('audi', [Validators.minLength(2)]);
+  price = new FormControl(100, [Validators.min(0)]);
+  year = new FormControl(2000, [Validators.min(1990),Validators.max(2021)]);
   myFormGroup = new FormGroup({
-    model: new FormControl('audi'),
-    price: new FormControl(100),
-    year: new FormControl(2000),
+    model: this.model,
+    price: this.price,
+    year: this.year,
   });
 
   constructor(private carService: CarService) {
