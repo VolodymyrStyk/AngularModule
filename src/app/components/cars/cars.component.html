@@ -1,0 +1,17 @@
+<form [formGroup]="myFormGroup" (ngSubmit)="save()">
+  <div>
+    <label>Model:</label>
+    <input type="text" name="model" formControlName="model">
+  </div>
+  <div>
+    <label>Price:</label>
+    <input type="number" name="price" formControlName="price">
+  </div>
+  <div>
+    <label>Year:</label>
+    <input type="number" name="year" formControlName="year">
+  </div>
+  <button [disabled]="myFormGroup.invalid">save</button>
+</form>
+<hr>
+<app-car *ngFor="let car of cars.reverse()" [car]="car"></app-car>
