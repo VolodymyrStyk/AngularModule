@@ -8,7 +8,7 @@ import {Car} from "../interfaces/car";
 })
 export class CarService {
 
-  private url: string = 'http://192.168.88.253/api/v1/cars';
+  private url: string = 'http://92.253.239.109/api/v1/cars';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -20,3 +20,5 @@ export class CarService {
     return this.httpClient.post<Car>(this.url, car);
   }
 }
+//'http://192.168.88.253/api/v1/cars'
+//http://92.253.239.109/api/v1/cars

@@ -9,6 +9,9 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent implements OnInit {
+  modelErrorMessage:string;
+  priceErrorMessage:string;
+  yearErrorMessage:string;
   cars: Car[];
   model = new FormControl('audi', [Validators.minLength(2)]);
   price = new FormControl(100, [Validators.min(0)]);
@@ -35,4 +38,15 @@ export class CarsComponent implements OnInit {
     );
   }
 
+  checkValid() {
+    if (this.model.errors){
+      this.modelErrorMessage = 'You input ' + this.model.errors.minlength.actualLength + ' Please input more then ' + this.model.errors.minlength.requiredLength + ' symbols';
+    }
+    if (this.price.errors){
+      this.priceErrorMessage = 'You input ' + this.price.errors.min.actual + ' Please input more then ' + this.price.errors.min.min;
+    }
+    if (this.year.errors){
+      this.yearErrorMessage = 'You input ' + this.year.errors.min.actual + ' Please input more then ' + this.year.errors.min.min;
+    }
+  }
 }

@@ -1,15 +1,18 @@
-<form [formGroup]="myFormGroup" (ngSubmit)="save()">
+<form [formGroup]="myFormGroup" (ngSubmit)="save()" (input)="checkValid()">
   <div>
     <label>Model:</label>
     <input type="text" name="model" [formControl]="model">
+    <span *ngIf="model.errors" [class.error]="true">{{modelErrorMessage}}</span>
   </div>
   <div>
     <label>Price:</label>
     <input type="number" name="price" [formControl]="price">
+    <span *ngIf="price.errors" [class.error]="true">{{priceErrorMessage}}</span>
   </div>
   <div>
     <label>Year:</label>
     <input type="number" name="year" [formControl]="year">
+    <span *ngIf="year.errors" [class.error]="true">{{yearErrorMessage}}</span>
   </div>
   <button [disabled]="myFormGroup.invalid">save</button>
 </form>
